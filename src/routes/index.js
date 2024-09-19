@@ -1,18 +1,20 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Details from '../pages/Details';
-import NotFound from '../pages/NotFound';
-
+import PageNotFound from '../pages/NotFound';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 function AppRouter() {
   return (
     <Router>
+    <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/details/:id" element={<Details />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<PageNotFound />} /> {/* Route 404 */}
       </Routes>
+    <Footer />
     </Router>
   );
 }

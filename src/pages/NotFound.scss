@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+main {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-family: MontSerrat;
+    h1, p, a{
+    display: flex;
+    justify-content: center;
+    margin:40px;
+    }
+
+    h1 ,p{
+        color: #FF6060;
+    }
+    h1{
+        font-size: 200px;
+        font-weight: 700;
+        
+    }
+    p{
+        font-size: 36px;
+        font-weight: 500;
+    }
+    a{
+        color: black;
+        font-weight: bold;
+    }
+
+}

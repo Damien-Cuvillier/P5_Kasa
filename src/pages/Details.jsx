@@ -14,7 +14,6 @@ function Details() {
 
   return (
     <div>
-      <Header />
       <main>
         <h1>{listing.title}</h1>
         {/* Afficher d'autres détails */}

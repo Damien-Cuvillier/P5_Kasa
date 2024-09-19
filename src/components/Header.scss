@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 header {
     background-color: #f8f9fa;
     padding: 1rem;
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:30px;
     nav {
       display: flex;
       align-items: center;
@@ -9,9 +14,14 @@ header {
       a {
         margin-right: 1rem;
         text-decoration: none;
-        color: #333;
-        font-weight: bold;
-  
+        color:black;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34.22px;
+        text-align: right;
+        padding-left: 50px;
+
         &:hover {
           text-decoration: underline;
         }

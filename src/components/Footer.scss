@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Couleur de fond noire */
+    color: #fff; /* Texte en blanc */
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+    
+    .footer-logo {
+      height: 40px; /* Ajustez la taille du logo */
+      margin-right: 1rem;
+      padding: 30px;
+    }
+  
+    .footer-text {
+      margin: 0;
+      font-size: 1.5rem; /* Ajustez la taille de la police si nécessaire */
+    }
+  }
+  
