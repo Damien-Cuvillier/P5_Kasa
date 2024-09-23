@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
-import data from '../data/donnees.json';
+import data from '../data/data.json';
 
 export const DataContext = createContext();
 

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import Header from '../components/Header';
 import { DataContext } from '../components/DataProvider';
 
 function Details() {

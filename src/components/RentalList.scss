@@ -1,0 +1,8 @@
+.rental-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 30px;
+    justify-content: center;
+    width: 1240px;
+    margin: auto;
+}
