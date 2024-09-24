@@ -2,11 +2,13 @@ import React from 'react';
 import Banner from '../components/Banner';
 import bannerImage from '../assets/banner2.png';
 import Accordion from '../components/Accordion';
+import './About.scss';
+
 function About() {
   const categories = [
     {
       title: 'Fiabilité',
-      content: 'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sur régulièrement vérifiées par nos équipes.',
+      content: 'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.',
     },
     {
       title: 'Respect',
@@ -14,20 +16,21 @@ function About() {
     },
     {
       title: 'Service',
-      content: 'La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons ç ce que chaque interaction, que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance.',
+      content: 'La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance.',
     },
     {
       title: 'Sécurité',
-      content: 'La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l\'hôte qu\'au locataire, cela permet à nos équipes de vérifier que les standars sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.'
+      content: 'La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l\'hôte qu\'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.',
     },
   ];
+
   return (
-    <div>
-    <Banner image={bannerImage} />
+    <div className="about-page">
+      <Banner image={bannerImage} />
       <main>
-      {categories.map((category, index) => (
-        <Accordion key={index} title={category.title} content={category.content} />
-      ))}
+        {categories.map((category, index) => (
+          <Accordion key={index} title={category.title} content={category.content} />
+        ))}
       </main>
     </div>
   );

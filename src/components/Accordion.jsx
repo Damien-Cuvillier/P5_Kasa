@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Accordion.scss';
 
-function Accordion({ title, content }) {
+function Accordion({ title, content, className }) {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
 
@@ -18,7 +18,7 @@ function Accordion({ title, content }) {
   }, [isOpen]);
 
   return (
-    <div className="accordion">
+    <div className={`accordion ${className}`}>
       <div className="accordion-header" onClick={toggleAccordion}>
         <h2>{title}</h2>
         <span className={`accordion-icon ${isOpen ? 'open' : ''}`}>

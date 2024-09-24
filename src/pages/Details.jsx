@@ -10,7 +10,7 @@ function HousingDetails() {
   if (!rental) return <div>Location non trouvée</div>;
 
   return (
-    <div className="housing-details">
+    <div className="housing-detail">
       <Slideshow pictures={rental.pictures} />
       <h1>{rental.title}</h1>
       <p>{rental.description}</p>
