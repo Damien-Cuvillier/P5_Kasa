@@ -1,23 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../data/data.json';
+import { DataContext } from './DataProvider';
 
 function HousingDetails() {
   const { id } = useParams();
-  const rental = data.find((item) => item.id === id);
-
-  if (!rental) {
-    return <div>Location non trouvée</div>;
-  }
+  const { listings } = useContext(DataContext);
+  const rental = listings.find((rental) => String(rental.id) === String(id));
+ 
+  if (!rental) return <div>Location non trouvée</div>;
 
   return (
-    <div>
+    <div className="housing-details">
       <h1>{rental.title}</h1>
       <img src={rental.cover} alt={rental.title} />
-      <p>{rental.description}</p>
-      {/* Ajoutez d'autres détails que vous souhaitez afficher */}
+      {/* Ajoutez d'autres détails ici */}
     </div>
   );
 }
-
 export default HousingDetails;

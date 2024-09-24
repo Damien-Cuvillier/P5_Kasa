@@ -7,18 +7,17 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HousingDetails from '../components/HousingDetails';
 
-
 function AppRouter() {
   return (
     <Router>
-    <Header />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<PageNotFound />} /> {/* Route 404 */}
         <Route path="/housing/:id" element={<HousingDetails />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
-    <Footer />
+      <Footer />
     </Router>
   );
 }

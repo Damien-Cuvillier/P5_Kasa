@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import RentalCard from './RentalCard';
-import data from '../data/data.json'; 
+import { DataContext } from './DataProvider';
 import './RentalList.scss';
 
 function RentalList() {
+  const { listings } = useContext(DataContext);
+
   return (
     <div className="rental-list">
-      {data.map((rental) => {
-        return (
-          <RentalCard 
-            key={rental.id} 
-            title={rental.title} 
-            image={rental.cover} 
-            id={rental.id} // Ajoutez cette ligne
-          />
-        );
-      })}
+      
+      {listings.map((rental) => {
+  return (
+    <RentalCard 
+      key={rental.id} 
+      id={rental.id} 
+      image={rental.cover} 
+      title={rental.title} 
+    />
+  );
+})}
     </div>
   );
 }
+
 
 export default RentalList;

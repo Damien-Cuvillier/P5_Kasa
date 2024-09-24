@@ -1,18 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './RentalCard.scss'; // Importez les styles SCSS
+import { Link } from 'react-router-dom';
+import './RentalCard.scss';
 
-function RentalCard({ image, title, id }) {
-  const navigate = useNavigate();
-
-  const handleCardClick = () => {
-    navigate(`/housing/${id}`);
-  };
-
+function RentalCard({ id, image, title }) {
   return (
-    <div className="rental-card" onClick={handleCardClick}>
-      <img src={image} alt={title} className="rental-image" />
-      <h2 className="rental-title">{title}</h2>
+    <div className="rental-card">
+      <Link to={`/housing/${id}`}>
+        <img src={image} alt={title} className="rental-image" />
+        <h2 className="rental-title">{title}</h2>
+      </Link>
     </div>
   );
 }
