@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../data/data.json';
-import Slideshow from './Slideshow';
+import Slideshow from './components/Slideshow';
 
 function HousingDetails() {
   const { id } = useParams();
