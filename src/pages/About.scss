@@ -1,44 +1,11 @@
 .about-page {
     .accordion {
       margin-bottom: 1rem;
-      margin: 20px;
-      gap: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-  
+
       .accordion-header {
-        border-radius: 5px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        background-color: #FF6060;
-        cursor: pointer;
-        height: 32px;
         width: 90%;
       }
-  
-      .accordion-icon {
-        font-size: 1.5rem;
-        transition: transform 0.3s ease; // Transition for the icon rotation
-      }
-  
-      .accordion-icon.open {
-        transform: rotate(180deg);
-      }
-  
-      .accordion-content {
-        padding: 0 1rem;
-        background-color: #fff;
-        color: black;
-        width: 1023px;
-        transition: max-height 0.5s ease, padding 0.3s ease;
-        max-height: 0;
-        overflow: hidden;
-      }
-  
+    
       .accordion-content.open {
         max-height: 1000px; // Ensure this is high enough to contain your content
         padding: 1rem;

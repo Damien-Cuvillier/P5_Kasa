@@ -1,12 +1,12 @@
 // src/components/HousingDetails.jsx
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { DataContext } from './DataProvider';
-import Slideshow from './Slideshow';
-import Accordion from './Accordion';
-import Tags from './Tags';
-import Author from './Author';
-import Rating from './Rating';
+import { DataContext } from '../components/DataProvider';
+import Slideshow from '../components/Slideshow/Slideshow';
+import Accordion from '../components/Collapse/Accordion';
+import Tags from '../components/Tags/Tags';
+import Author from '../components/Author/Author';
+import Rating from '../components/Rating/Rating';
 import './HousingDetails.scss';
 
 function HousingDetails() {

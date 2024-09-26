@@ -15,7 +15,7 @@ function Accordion({ title, content }) {
     <div className="accordion">
       <div className="accordion-header" onClick={toggleAccordion}>
         <h2>{title}</h2>
-        <FontAwesomeIcon icon={isOpen ? faAngleUp : faAngleDown} />
+        <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleUp} />
       </div>
       <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
         {isOpen && <p>{content}</p>}

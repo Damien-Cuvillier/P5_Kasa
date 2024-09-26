@@ -1,8 +1,8 @@
 import React from 'react';
-import Banner from '../components/Banner';
+import Banner from '../components/Banner/Banner';
 import './Home.scss';
 import bannerImage from '../assets/banner.png';
-import RentalList from '../components/RentalList';
+import RentalList from '../components/RentalList/RentalList';
 
 function Home() {
  

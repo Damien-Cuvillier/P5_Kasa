@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.scss'; // Importez les styles SCSS
-import logo from '../assets/logo-black.png';
+import logo from '../../assets/logo-black.png';
 function Footer() {
   return (
     <footer className="footer">

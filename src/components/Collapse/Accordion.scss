@@ -1,0 +1,47 @@
+.accordion {
+  color: #fff;
+  margin-bottom: 1rem;
+  margin: 15px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column; // Garder une direction verticale
+  justify-content: center;
+  align-items: center;
+  
+  .accordion-header {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #FF6060;
+    cursor: pointer;
+    height: 20px; 
+    width: 100%;
+  }
+
+  .accordion-content {
+    padding: 0 1rem;
+    background-color: #fff;
+    color: black;
+    width: 90%;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    overflow: hidden;
+   
+    .accordion-content.open {
+      max-height: 1000px; // Assurez-vous que cette valeur est suffisante
+      padding: 1rem; // Padding lorsque ouvert
+      visibility: visible; // Rendre visible
+      opacity: 1; // Rendre visible
+      transition: max-height 0.5s ease, padding 0.3s ease, opacity 0.5s ease; // Transition douce pour l'opacité
+    }
+
+    p {
+      color: black;
+      font-size: 18px;
+      margin: 0; // Supprimer la marge pour éviter l'empiètement
+    }
+  }
+}
+
+

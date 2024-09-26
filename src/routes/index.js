@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import PageNotFound from '../pages/NotFound';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import HousingDetails from '../components/HousingDetails';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import HousingDetails from '../pages/HousingDetails';
 
 function AppRouter() {
   return (

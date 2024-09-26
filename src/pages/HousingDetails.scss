@@ -21,11 +21,16 @@
   }
 
   .housing-accordion {
-    width: 1240px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 20px 0px;
+    gap:80px;
+
+    &.equipements{
+      
+    }
     
     .accordion {
       width: 50%;

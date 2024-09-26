@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import RentalCard from './RentalCard';
-import { DataContext } from './DataProvider';
+import RentalCard from '../RentalCard/RentalCard';
+import { DataContext } from '../DataProvider';
 import './RentalList.scss';
 
 function RentalList() {

@@ -1,7 +1,7 @@
 import React from 'react';
-import Banner from '../components/Banner';
+import Banner from '../components/Banner/Banner';
 import bannerImage from '../assets/banner2.png';
-import Accordion from '../components/Accordion';
+import Accordion from '../components/Collapse/Accordion';
 import './About.scss';
 
 function About() {
