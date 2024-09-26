@@ -21,6 +21,10 @@
   }
   .accordion-icon{
     font-size: 30px;
+    transition: transform 0.3s ease;
+  }
+  .accordion-icon.open {
+    transform: rotate(180deg);
   }
   .accordion-content {
     padding: 0 1rem;
@@ -44,7 +48,12 @@
       margin: 0; // Supprimer la marge pour éviter l'empiètement
       
     }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
   }
+}
 
 
 

@@ -4,18 +4,18 @@
   margin:auto;
   
   .housing-accordion {
-    width: 100%;
+    width: 1240px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start; // Align items to the top to prevent shift
+    justify-content: space-between;
     margin: 20px 0px;
     gap:80px;
-
+    
     .accordion {
       width: 50%;
     }
   }
-
+  
   .Tag-and-Rating {
     display: flex;
     justify-content: space-between;

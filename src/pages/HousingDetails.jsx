@@ -27,7 +27,7 @@ function HousingDetails() {
       </div>
       <div className='housing-accordion'>
         <Accordion className="description" title="Description" content={rental.description} />
-        <Accordion className="equipements" title="Équipements" content={rental.equipments.join(', ')} />
+        <Accordion className="equipements" title="Équipements" content={rental.equipments } isList/>
       </div>
     </div>
   );
