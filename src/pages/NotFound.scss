@@ -6,6 +6,9 @@ main {
     display: flex;
     flex-direction: column;
     font-family: MontSerrat;
+    max-width: 1240px;
+    margin: auto;
+    
     h1, p, a{
     display: flex;
     justify-content: center;

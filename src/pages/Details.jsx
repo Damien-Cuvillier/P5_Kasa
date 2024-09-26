@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import data from '../data/data.json';
 import Slideshow from './components/Slideshow';
 
-function HousingDetails() {
+function Details() {
   const { id } = useParams();
   const rental = data.find((item) => item.id === id);
 
@@ -19,4 +19,4 @@ function HousingDetails() {
   );
 }
 
-export default HousingDetails;
+export default Details;

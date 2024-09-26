@@ -2,8 +2,11 @@ import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { DataContext } from './DataProvider';
 import Slideshow from './Slideshow';
-import Accordion from './Accordion'; // Assurez-vous d'importer votre composant Accordion
+import Accordion from './Accordion';
 import './HousingDetails.scss';
+import Tags from './Tags';
+import Author from './Author';
+import Rating from './Rating';
 
 function HousingDetails() {
   const { id } = useParams();
@@ -15,29 +18,10 @@ function HousingDetails() {
 
   return (
     <div className="housing-details">
-      {/* Carrousel d'images */}
       <Slideshow pictures={rental.pictures} />
-
-      {/* Titre de la location */}
-      <h1 className="housing-title">{rental.title}</h1>
-      {/* Localisation */}
-      <div className='loc-&-author'>
-        <p className="location">{rental.location}</p>
-        <p className="author">{rental.name}</p> {/* Auteur du post */}
-      </div>
-      {/* Boutons et évaluation */}
-      <div className="buttons-and-rating">
-        <button className="button">Cosy</button>
-        <button className="button">Canal</button>
-        <button className="button">Paris 10</button>
-        <div className="rating">
-          {Array.from({ length: rental.rating }, (_, index) => (
-            <span key={index} className="star">⭐</span> // Utilisez un symbole ou une icône pour les étoiles
-          ))}
-        </div>
-      </div>
-
-      {/* Accordion pour les catégories déroulantes */}
+      <Author title={rental.title} location={rental.location} author={rental.name} />
+      <Tags tags={["Cosy", "Canal", "Paris 10"]} />
+      <Rating rating={rental.rating} />
       <div className='housing-accordion'>
         <Accordion className="description" title="Description" content={rental.description} />
         <Accordion className="equipements" title="Équipements" content={rental.equipments.join(', ')} />

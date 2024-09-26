@@ -5,33 +5,29 @@ function Slideshow({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
+    if (currentIndex < pictures.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      (prevIndex - 1 + pictures.length) % pictures.length
-    );
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
   };
 
   return (
     <div className="slideshow">
-      {pictures.length > 1 && (
-        <button className="prev" onClick={prevSlide}>
-          &#10094; {/* Flèche gauche */}
-        </button>
+      <img src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="slide-image" />
+      {currentIndex > 0 && (
+        <button onClick={prevSlide} className="prev-button">❮</button>
       )}
-      <img src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
-      {pictures.length > 1 && (
-        <button className="next" onClick={nextSlide}>
-          &#10095; {/* Flèche droite */}
-        </button>
+      {currentIndex < pictures.length - 1 && (
+        <button onClick={nextSlide} className="next-button">❯</button>
       )}
-      {pictures.length > 1 && (
-        <div className="slide-number">
-          {currentIndex + 1} / {pictures.length}
-        </div>
-      )}
+      <div className="slide-counter">
+        {currentIndex + 1} / {pictures.length}
+      </div>
     </div>
   );
 }
