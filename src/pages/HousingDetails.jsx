@@ -22,7 +22,7 @@ function HousingDetails() {
       <Slideshow pictures={rental.pictures} />
       <Author title={rental.title} location={rental.location} host={rental.host} />
       <div className="Tag-and-Rating">
-        <Tags tags={["Cosy", "Canal", "Paris 10"]} />
+        <Tags tags={rental.tags} />
         <Rating className="rating" rating={rental.rating} />
       </div>
       <div className='housing-accordion'>
