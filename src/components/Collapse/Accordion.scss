@@ -19,7 +19,9 @@
     height: 20px; 
     width: 100%;
   }
-
+  .accordion-icon{
+    font-size: 30px;
+  }
   .accordion-content {
     padding: 0 1rem;
     background-color: #fff;
@@ -27,21 +29,22 @@
     width: 90%;
     transition: max-height 0.5s ease, padding 0.3s ease;
     overflow: hidden;
+    max-height: 0; // Commence avec une hauteur nulle
    
-    .accordion-content.open {
-      max-height: 1000px; // Assurez-vous que cette valeur est suffisante
-      padding: 1rem; // Padding lorsque ouvert
-      visibility: visible; // Rendre visible
-      opacity: 1; // Rendre visible
-      transition: max-height 0.5s ease, padding 0.3s ease, opacity 0.5s ease; // Transition douce pour l'opacité
+    &.open {
+        max-height: 1000px;
+        padding: 1rem;
+        transition: max-height 0.5s ease, padding 0.3s ease, opacity 0.5s ease; // Transition douce pour l'opacité
+      }
     }
-
+  
     p {
       color: black;
       font-size: 18px;
       margin: 0; // Supprimer la marge pour éviter l'empiètement
+      
     }
   }
-}
+
 
 

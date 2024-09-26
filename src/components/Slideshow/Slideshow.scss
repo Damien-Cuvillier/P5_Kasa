@@ -6,7 +6,9 @@
 
 .slide-image {
   width: 100%;
-  height: auto;
+  height: 415px;
+  object-fit: cover;
+  border-radius: 25px;
 }
 
 .prev-button,

@@ -20,7 +20,7 @@ function HousingDetails() {
   return (
     <div className="housing-details">
       <Slideshow pictures={rental.pictures} />
-      <Author title={rental.title} location={rental.location} author={rental.name} />
+      <Author title={rental.title} location={rental.location} host={rental.host} />
       <div className="Tag-and-Rating">
         <Tags tags={["Cosy", "Canal", "Paris 10"]} />
         <Rating className="rating" rating={rental.rating} />
