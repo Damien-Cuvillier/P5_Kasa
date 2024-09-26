@@ -1,9 +1,11 @@
 .housing-details {
   padding: 0 50px;
   width: 1240px;
+  margin:auto;
 
   .location {
     margin: 0 0 20px 0;
+    font-weight: 500;
   }
 
   img {
@@ -21,40 +23,19 @@
   .housing-accordion {
     width: 1240px;
     display: flex;
+    align-items: center;
     justify-content: center;
     margin: 20px 0px;
-
+    
     .accordion {
       width: 50%;
-      height: 52px;
     }
   }
 
-  .buttons-and-rating {
+  .Tag-and-Rating {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-
-    .button {
-      background-color: #FF6060;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 115px;
-      height: 25px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .rating {
-      margin-left: auto; // Pour aligner les étoiles à droite
-    }
-
-    .star {
-      color: #FF6060; // Couleur pour les étoiles
-    }
+    
   }
 }

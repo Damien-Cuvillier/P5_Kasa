@@ -1,0 +1,17 @@
+// src/components/Rating.scss
+.rating {
+    display: flex;
+    align-items: center;
+    gap:10px;
+  }
+  
+  .star {
+    color: #FF6060;
+    font-size: 20px;
+  }
+  .star-filled{
+    color: #FF6060;
+  }
+  .star-empty{
+    color: lightgray;
+  }

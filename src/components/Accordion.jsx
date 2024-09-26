@@ -1,32 +1,24 @@
-import React, { useState, useRef, useEffect } from 'react';
+// src/components/Accordion.jsx
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import './Accordion.scss';
 
-function Accordion({ title, content, className }) {
+function Accordion({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
-  const contentRef = useRef(null);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    if (isOpen) {
-      contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`;
-    } else {
-      contentRef.current.style.maxHeight = '0px';
-    }
-  }, [isOpen]);
-
   return (
-    <div className={`accordion ${className}`}>
+    <div className="accordion">
       <div className="accordion-header" onClick={toggleAccordion}>
         <h2>{title}</h2>
-        <span className={`accordion-icon ${isOpen ? 'open' : ''}`}>
-          ▼
-        </span>
+        <FontAwesomeIcon icon={isOpen ? faAngleUp : faAngleDown} />
       </div>
-      <div ref={contentRef} className={`accordion-content ${isOpen ? 'open' : ''}`}>
-        {content}
+      <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
+        {isOpen && <p>{content}</p>}
       </div>
     </div>
   );
