@@ -7,7 +7,7 @@ import './Header.scss';
 function Header() {
   return (
     <header>
-      <img src={logo} alt="Kasa Logo" style={{ height: '50px' }} /> {/* Ajoutez l'image */}
+      <img src={logo} className="header-logo" alt="Kasa Logo" style={{ height: '50px' }} /> {/* Ajoutez l'image */}
       <nav>
         <NavLink to="/" end className={({ isActive }) => (isActive ? 'active-link' : '')}>Accueil</NavLink>
         <NavLink to="/about" className={({ isActive }) => (isActive ? 'active-link' : '')}>A Propos</NavLink>
