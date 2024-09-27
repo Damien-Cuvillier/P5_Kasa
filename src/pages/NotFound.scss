@@ -31,7 +31,35 @@ main {
         color: black;
         font-weight: bold;
     }
+    @media (max-width: 1024px) {
+        padding: 1rem;
+    
+        h1 {
+          font-size: 150px;
+        }
+    
+        p {
+          font-size: 28px;
+        }
+    
+        a {
+          font-size: 16px;
+        }
+      }
     @media (max-width: 768px) {
-      
+      h1{
+        font-size:96px ;
+      }
+      p{
+        
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+        text-align: center;
+
+      }
+      a{
+        font-size: 14px;
+      }
     }
 }
