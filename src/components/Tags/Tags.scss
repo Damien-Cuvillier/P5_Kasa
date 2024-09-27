@@ -1,21 +1,27 @@
 .tags{
     display: flex;
+    width: 100%;
 
     .button {
         background-color: #FF6060;
         color: white;
         border: none;
-        width: 120px;
-        padding:0px 10px;
+        padding:0px 15px;
         height: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right:8px;
-        border-radius: 25px;
+        border-radius: 5px;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
 
+  }
+}
+@media (max-width: 768px) {
+  .button{
+    font-size: 10px;
+    
   }
 }

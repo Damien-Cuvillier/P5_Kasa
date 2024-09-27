@@ -1,0 +1,31 @@
+/* src/components/TitleAndLocation.scss */
+
+.title-location {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .housing-title {
+    margin: 0;
+    margin-bottom: 5px; /* Espacement entre le titre et la localisation */
+    font-weight: 500;
+    color: #FF6060;
+  }
+  
+  .location {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    .housing-title{
+        font-size: 24px;
+    }
+    .title-location{
+        width: 100%;
+    }
+    .location{
+        font-size: 14px;
+    }
+  }

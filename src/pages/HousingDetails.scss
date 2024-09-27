@@ -1,12 +1,19 @@
 .housing-details {
-  padding: 0 50px;
-  width: 1240px;
-  margin:auto;
   
-  .housing-accordion {
-    width: 1240px;
+  width: 90%;
+  margin:auto;
+  .author {
+    width: 50%;
+  }
+  .block {
     display: flex;
-    align-items: flex-start; // Align items to the top to prevent shift
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .housing-accordion {
+    width: 100%;
+    display: flex;
+    align-items: flex-start; // Pour éviter le décalage vers le haut au clique dessus
     justify-content: space-between;
     margin: 20px 0px;
     gap:80px;
@@ -22,4 +29,41 @@
     align-items: center;
     
   }
+}
+@media (max-width: 1024px) {
+  .housing-details{
+    .housing-accordion {
+      flex-direction: column; // Passer en mode colonne
+      align-items: center; // Centrer les éléments
+      gap:10px;
+
+      .accordion {
+        width: 95%; // Élargir les accordéons pour prendre toute la largeur
+      }
+    
+    }
+  }
+}
+@media (max-width: 768px) {
+  .housing-details {
+    padding: 0 10px; // Réduire le padding encore plus
+    
+    .housing-accordion {
+      margin: 10px 0; // Réduire l'espacement vertical
+      gap: 1px; // Réduire l'espacement entre les accordéons
+      flex-direction: column; // Passer en colonne
+      align-items: center; // Centrer les éléments
+      
+      .accordion {
+        width: 95%; 
+      }
+    }
+    .Tag-and-Rating {
+      flex-direction: column; // Passer en colonne pour une meilleure lisibilité
+      align-items: flex-start; // Aligner à gauche
+      gap:30px;
+    }
+    
+  }
+  
 }

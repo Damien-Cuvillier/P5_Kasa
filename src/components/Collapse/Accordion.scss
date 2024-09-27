@@ -18,6 +18,10 @@
     cursor: pointer;
     height: 20px; 
     width: 100%;
+  
+  }
+  .accordion-header h2{
+    font-size: 18px;
   }
   .accordion-icon{
     font-size: 30px;
@@ -56,4 +60,32 @@
   
 
 }
+@media (max-width: 1024px) {
+  .accordion{
+    width: 100%;
 
+    .accordion-header{
+      width:100%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .accordion{
+    p {
+      font-size: 14px;
+    }
+    li{
+      font-size: 14px;
+    }
+    .accordion-header h2{
+      font-size: 13px;
+    }
+    
+  }
+  .accordion-header{
+    width:90%;
+
+    
+  }
+ 
+}

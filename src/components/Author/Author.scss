@@ -1,35 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.title-location-author {
-    display: flex;
-    flex-direction: column; /* Empile les éléments verticalement */
-}
-  
-  .housing-title-author {
-    display: flex; /* Aligne le titre et l'auteur sur la même ligne */
-    align-items: center; /* Centre verticalement */
-    justify-content: space-between;
-  }
-  
-  .housing-title {
-    margin: 0; /* Évite les marges par défaut */
-    margin-right: 10px; 
-    font-weight: 500;
-    color:#FF6060;
-  }
-  
-  .location {
-    margin:0;
-    margin-bottom: 20px;
-    font-weight: 500;
-    font-size: 16px;
-  }
-  
   .author-info {
     display: flex; /* Aligne le nom et la photo de l'auteur horizontalement */
-    align-items: center; /* Centre verticalement l'image par rapport au texte */
+    align-items: flex-end; /* Centre verticalement l'image par rapport au texte */
     margin-left: 10px; /* Espace entre le titre et l'auteur */
     margin-top: 10px;
+    
   }
   
   .author-name {
@@ -53,5 +29,29 @@
     width: 64px; /* Ajuste la taille de l'image de l'auteur */
     height: 64px; /* Ajuste la taille de l'image de l'auteur */
     border-radius: 50%; /* Rend l'image ronde */
+
   }
-  
+  @media (max-width: 768px) {
+    .title-location-author{
+      font-size: 14px;
+    }
+    .author-info{
+      position: relative;
+      top:110px;
+      width: 13%;
+    }
+    
+  .author-firstname,
+  .author-lastname {
+    font-size:12px ;
+  }
+  .author-picture{
+    width: 32px;
+    height: 32px;
+  }
+  .author-name {
+    width: 90px;
+    height: 33px;
+    margin-bottom: 10px;
+  }
+}
