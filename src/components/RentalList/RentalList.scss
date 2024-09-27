@@ -2,6 +2,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
     gap: 10px;
-    width: 1240px;
+    width: 100%;
     margin: auto;
 }
+@media (max-width: 1024px) {
+    .rental-list{
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les écrans ≤ 1024px */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .rental-list{
+    grid-template-columns: 1fr; /* 1 colonne pour les écrans ≤ 768px */
+    width: 100%; /* Réduire la largeur pour les petits écrans */
+    }
+  }

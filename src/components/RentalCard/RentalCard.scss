@@ -8,7 +8,7 @@
     margin: 10px;
     text-align: center;
     padding: 10px;
-    width:340px;
+    width:90%;
     height: 340px;
     cursor: pointer;
     
@@ -32,3 +32,9 @@
       
     }
   }
+  @media (max-width: 768px) {
+    .rental-card{
+      width: 97%;
+      margin: 10px 0;
+    }
+}

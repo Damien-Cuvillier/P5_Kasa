@@ -1,12 +1,17 @@
 .home {
+  
     .rental-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 20px;
-      width: 1240px;
+      padding-bottom: 20px;
+      width: 90%;
       margin: auto;
+    }
+  }
+  @media (max-width: 768px) {
+    .rental-container{
+      width: 100%;
       
     }
   }
-  
