@@ -12,6 +12,7 @@ header {
     nav {
       display: flex;
       align-items: center;
+      gap:10px;
   
       a {
         margin-right: 1rem;
@@ -37,8 +38,8 @@ header {
     }
     @media (max-width: 1024px) {
       
-      width: 90%;
-      padding: 1rem;
+      width: 82%;
+      
   
       nav {
         a {
@@ -56,6 +57,7 @@ header {
         a {
           font-size: 12px;
           text-transform: uppercase;
+          padding:0;
         }
   
         .header-logo {
