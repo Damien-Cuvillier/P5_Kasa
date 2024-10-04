@@ -1,13 +1,22 @@
+// Importation de la bibliothèque React
 import React from 'react';
-import './Tags.scss'
+
+// Importation du fichier de styles pour les tags
+import './Tags.scss';
+
+// Définition du composant fonctionnel Tags qui accepte une prop 'tags'
 function Tags ({tags}) {
     return (
+        // Conteneur pour les tags avec la classe CSS 'tags'
         <div className="tags">
             {tags.map((tag, index) => (
-        <span key={index} className="button">{tag}</span>
-      ))}
+                // Pour chaque tag, on crée un élément <span> avec la classe 'button'
+                // L'attribut key est défini à 'index' pour identifier chaque élément de manière unique
+                <span key={index} className="button">{tag}</span>
+            ))}
         </div>
-    )
+    );
 }
 
-export default Tags
+// Exportation du composant Tags pour pouvoir l'utiliser dans d'autres parties de l'application
+export default Tags;

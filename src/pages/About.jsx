@@ -1,10 +1,19 @@
+// Importation des modules nécessaires depuis React
 import React from 'react';
+
+// Importation des composants nécessaires
 import Banner from '../components/Banner/Banner';
-import bannerImage from '../assets/banner2.png';
 import Accordion from '../components/Collapse/Accordion';
+
+// Importation du fichier de styles SCSS
 import './About.scss';
 
+// Importation de l'image de la bannière
+import bannerImage from '../assets/banner2.png';
+
+// Définition du composant fonctionnel About
 function About() {
+  // Définition des catégories avec leurs titres et contenus
   const categories = [
     {
       title: 'Fiabilité',
@@ -24,10 +33,13 @@ function About() {
     },
   ];
 
+  // Rendu du composant avec la bannière et les accordéons pour chaque catégorie
   return (
     <div className="about-page">
+      {/* Affichage de la bannière avec une image */}
       <Banner image={bannerImage} />
       <main>
+        {/* Affichage des accordéons pour chaque catégorie */}
         {categories.map((category, index) => (
           <Accordion key={index} title={category.title} content={category.content} />
         ))}
@@ -36,4 +48,5 @@ function About() {
   );
 }
 
+// Exportation du composant pour pouvoir l'utiliser dans d'autres parties de l'application
 export default About;

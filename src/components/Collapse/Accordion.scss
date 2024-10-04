@@ -35,14 +35,14 @@
     background-color: #fff;
     color: black;
     width: 90%;
-    transition: max-height 0.5s ease, padding 0.3s ease;
+    transition: max-height 0.5s ease, padding 0.5s ease;
     overflow: hidden;
     max-height: 0; // Commence avec une hauteur nulle
    
     &.open {
         max-height: 1000px;
         padding: 1rem;
-        transition: max-height 0.5s ease, padding 0.3s ease, opacity 0.5s ease; // Transition douce pour l'opacité
+        
       }
     }
   

@@ -20,4 +20,11 @@
       font-size: 1.5rem; /* Ajustez la taille de la police si nécessaire */
     }
   }
- 
+  @media (max-width: 768px) {
+    .footer{
+
+    .footer-text{
+      font-size: 14px;
+    }
+  }
+}
