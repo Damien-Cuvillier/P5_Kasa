@@ -19,7 +19,7 @@
     .banner-title {
       position: absolute;
       bottom: 80px;
-      left: 26%;
+      left: 27%;
       color: #fff;
       font-size: 2rem;
       font-weight: bold;
@@ -49,19 +49,11 @@
       }
       .banner-title {
         bottom: 25px;
-        left: 20%;
+        left: 7%;
         font-size: 24px;
         line-height: 1.2;
-        
+        text-align: center;
+        width: 90%;
       }
     }
-    @media (max-width: 480px) {
-      .banner-title{
-        bottom: 30px;
-        left: 5%; /* Centrer le texte horizontalement */
-        width: 90%; /* Assurer que le texte se centre bien et ne dépasse pas */
-        line-height: 1.2; /* Ajuster le line-height pour améliorer la lisibilité */
-        
-      }
-  }
 }
