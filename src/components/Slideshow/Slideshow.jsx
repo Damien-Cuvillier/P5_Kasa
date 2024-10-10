@@ -1,10 +1,7 @@
-// Importation de la bibliothèque React et du hook useState
 import React, { useState } from 'react';
-
-// Importation du fichier de styles pour le slideshow
 import './Slideshow.scss';
 
-// Définition du composant fonctionnel Slideshow qui accepte une prop 'pictures'
+// Définition du composant fonctionnel Slideshow avec une prop 'pictures'
 function Slideshow({ pictures }) {
   // Définition de l'état local 'currentIndex' avec la valeur initiale 0
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +21,6 @@ function Slideshow({ pictures }) {
   };
 
   return (
-    // Conteneur principal du slideshow avec la classe CSS 'slideshow'
     <div className="slideshow">
       {/* Affichage de l'image courante */}
       <img src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="slide-image" />
@@ -47,5 +43,4 @@ function Slideshow({ pictures }) {
   );
 }
 
-// Exportation du composant Slideshow pour pouvoir l'utiliser dans d'autres parties de l'application
 export default Slideshow;

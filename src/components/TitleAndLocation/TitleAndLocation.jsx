@@ -1,4 +1,3 @@
-// src/components/TitleAndLocation.jsx
 import React from 'react';
 import './TitleAndLocation.scss';
 

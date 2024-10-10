@@ -1,9 +1,6 @@
-// Importation de la bibliothèque React et du hook useState
 import React, { useState } from 'react';
-// Importation de l'icône FontAwesome pour l'angle vers le haut
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-// Importation des styles SCSS pour le composant Accordion
 import './Accordion.scss';
 
 // Définition du composant fonctionnel Accordion
@@ -30,14 +27,13 @@ function Accordion({ title, content, isList }) {
       {/* Contenu de l'accordéon affiché selon l'état ouvert/fermé */}
       <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
         {isList ? (
-          // Si isList est vrai, affiche le contenu sous forme de liste
+          // Si isList est vrai, affiche le contenu sous forme de liste sinon, affiche le contenu comme un paragraphe
           <ul>
             {content.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
         ) : (
-          // Sinon, affiche le contenu comme un paragraphe
           <p>{content}</p>
         )}
       </div>
@@ -45,5 +41,4 @@ function Accordion({ title, content, isList }) {
   );
 }
 
-// Exportation du composant Accordion pour pouvoir l'utiliser dans d'autres parties de l'application
 export default Accordion;

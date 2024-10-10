@@ -1,6 +1,4 @@
-// Importation de la bibliothèque React
 import React from 'react';
-// Importation des styles SCSS pour le composant Author
 import './Author.scss';
 
 // Définition du composant fonctionnel Author
@@ -21,5 +19,4 @@ function Author({ host }) {
   );
 }
 
-// Exportation du composant Author pour pouvoir l'utiliser dans d'autres parties de l'application
 export default Author;

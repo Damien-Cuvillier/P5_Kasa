@@ -1,6 +1,4 @@
-// Importation de la bibliothèque React
 import React from 'react';
-// Importation des styles SCSS pour le composant Banner
 import './Banner.scss';
 
 // Définition du composant fonctionnel Banner
@@ -15,5 +13,4 @@ function Banner({ image, title }) {
   );
 }
 
-// Exportation du composant Banner pour pouvoir l'utiliser dans d'autres parties de l'application
 export default Banner;
