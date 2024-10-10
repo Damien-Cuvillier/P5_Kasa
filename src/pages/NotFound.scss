@@ -26,11 +26,14 @@ main {
     p{
         font-size: 36px;
         font-weight: 500;
+        margin-bottom: 125px;
     }
     a{
         color: black;
         font-weight: bold;
-        padding-bottom: 75px;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 70px;
     }
     @media (max-width: 1024px) {
         padding: 1rem;

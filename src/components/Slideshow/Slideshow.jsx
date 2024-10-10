@@ -8,37 +8,36 @@ function Slideshow({ pictures }) {
 
   // Fonction pour passer à la diapositive suivante
   const nextSlide = () => {
-    if (currentIndex < pictures.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
   };
 
   // Fonction pour revenir à la diapositive précédente
   const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
   };
+
+  // Vérifier si la liste des images contient plus d'une image
+  const hasMultiplePictures = pictures.length > 1;
 
   return (
     <div className="slideshow">
       {/* Affichage de l'image courante */}
       <img src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="slide-image" />
       
-      {/* Bouton pour la diapositive précédente, affiché seulement si currentIndex > 0 */}
-      {currentIndex > 0 && (
-        <button onClick={prevSlide} className="prev-button">❮</button>
+      {/* Afficher les boutons seulement s'il y a plus d'une image */}
+      {hasMultiplePictures && (
+        <>
+          <button onClick={prevSlide} className="prev-button">❮</button>
+          <button onClick={nextSlide} className="next-button">❯</button>
+        </>
       )}
       
-      {/* Bouton pour la diapositive suivante, affiché seulement si currentIndex < pictures.length - 1 */}
-      {currentIndex < pictures.length - 1 && (
-        <button onClick={nextSlide} className="next-button">❯</button>
+      {/* Afficher la numérotation seulement s'il y a plus d'une image */}
+      {hasMultiplePictures && (
+        <div className="slide-counter">
+          {currentIndex + 1} / {pictures.length}
+        </div>
       )}
-      
-      {/* Affichage du compteur de diapositives */}
-      <div className="slide-counter">
-        {currentIndex + 1} / {pictures.length}
-      </div>
     </div>
   );
 }

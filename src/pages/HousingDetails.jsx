@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { DataContext } from '../components/DataProvider';
 import Slideshow from '../components/Slideshow/Slideshow';
 import Accordion from '../components/Collapse/Accordion';
@@ -19,7 +19,7 @@ function HousingDetails() {
   const rental = listings.find((rental) => String(rental.id) === String(id));
 
   // Si la location n'est pas trouvée, afficher un message d'erreur
-  if (!rental) return <div>Location non trouvée</div>;
+  if (!rental) return <Navigate to="/NotFound"/>;
 
   return (
     <div className="housing-details">
