@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/P5_Kasa/static/css/main.014e84d5.css",
+    "main.js": "/P5_Kasa/static/js/main.2103f48e.js",
+    "static/js/453.9701a2b0.chunk.js": "/P5_Kasa/static/js/453.9701a2b0.chunk.js",
+    "static/media/banner2.png": "/P5_Kasa/static/media/banner2.640955dab8c7bff25514.png",
+    "static/media/banner.png": "/P5_Kasa/static/media/banner.19221376a0aa2549c135.png",
+    "index.html": "/P5_Kasa/index.html",
+    "main.014e84d5.css.map": "/P5_Kasa/static/css/main.014e84d5.css.map",
+    "main.2103f48e.js.map": "/P5_Kasa/static/js/main.2103f48e.js.map",
+    "453.9701a2b0.chunk.js.map": "/P5_Kasa/static/js/453.9701a2b0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.014e84d5.css",
+    "static/js/main.2103f48e.js"
+  ]
+}
