@@ -17,7 +17,7 @@ function AppRouter() {
       {/* Définition des différentes routes de l'application */}
       <Routes>
         {/* Route pour la page d'accueil */}
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         {/* Route pour la page "À propos" */}
         <Route path="/about" element={<About />} />
         {/* Route pour les détails d'un logement spécifique, avec un paramètre ID */}
